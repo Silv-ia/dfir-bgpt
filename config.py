@@ -1,30 +1,18 @@
 # Configuration for generative modelling and classification
 TRAIN_FOLDERS = [
-                # "wikipedia/train",  
-                # "ag_news/train", 
-                # "imagenet32/train", 
-                # "cifar/train", 
-                # "librispeech8K/train", 
-                # "speech_commands8K/train", 
-                "irishman/train",
+                "content/dfir-bgpt/training"
                 # "cpu_states/train",
                  ]     # Folder containing training data
 EVAL_FOLDERS = [
-                # "wikipedia/test",  
-                # "ag_news/test", 
-                # "imagenet32/test", 
-                # "cifar/test", 
-                # "librispeech8K/test", 
-                # "speech_commands8K/test", 
-                "irishman/test",
+                "content/dfir-bgpt/test"
                 # "cpu_states/test",
                 ]                                               # Folder containing evaluation data
 EVAL_SPLIT = 0.01                                                # Split of evaluation data
 
 # Configuration for the paths
-PRETRAINED_PATH = "weights-irish.pth"                            # Path to pre-trained weights
-WEIGHTS_PATH = "weights-irish.pth"                        # Path to save weights
-LOGS_PATH = "logs-irish.txt"                              # Path to save logs
+PRETRAINED_PATH = "weights-image.pth"                            # Path to pre-trained weights
+WEIGHTS_PATH = "weights-train.pth"                        # Path to save weights
+LOGS_PATH = "logs-bgpt.txt"                              # Path to save logs
 
 # Configuration for the model
 PATCH_SIZE = 16                                                 # Patch Size
