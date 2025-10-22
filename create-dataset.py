@@ -4,8 +4,14 @@ import random
 import re
 import sys
 
-### Corrupt one image
+### Create the dict structure under /dataset
+# /image0001
+# - header.bin
+# - tail.bin 
+# /body
+# - chunk1
+# - chunk2
+# ...
+# - meta.json
 
-### partition into 4096 byte sized chunks? 
-# Or use sliding window - must handle overlap
-
+# meta.json: len of body, #chunks, ch size, last chunk len
