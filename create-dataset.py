@@ -8,3 +8,4 @@ import sys
 
 ### partition into 4096 byte sized chunks? 
 # Or use sliding window - must handle overlap
+
