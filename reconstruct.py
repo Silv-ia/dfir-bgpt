@@ -9,14 +9,14 @@ def reconstruct_image(image_dir: Path, output_path: Path, repaired_dir: Path = N
     Reassemble a JPEG file from header, (repaired) body chunks, and trailer.
 
     Args:
-        image_dir (Path): Folder containing header.bin, trailer.bin, and body_chunks/.
+        image_dir (Path): Folder containing header.bin, trailer.bin, and body/.
         output_path (Path): Path to write the reconstructed JPEG.
         repaired_dir (Path, optional): 
-            Directory with repaired chunk files. If None, uses the original body_chunks.
+            Directory with repaired chunk files. If None, uses the original body.
     """
     header_path = image_dir / "header.bin"
     trailer_path = image_dir / "trailer.bin"
-    chunks_dir = repaired_dir if repaired_dir else (image_dir / "body_chunks")
+    chunks_dir = repaired_dir if repaired_dir else (image_dir / "body")
 
     # --- Load header and trailer ---
     header = header_path.read_bytes()
@@ -26,9 +26,9 @@ def reconstruct_image(image_dir: Path, output_path: Path, repaired_dir: Path = N
     meta_path = chunks_dir / "meta.json"
     with open(meta_path, "r") as f:
         meta = json.load(f)
-    chunk_size = meta["chunk_size"]
-    last_chunk_len = meta["last_chunk_len"]
-    num_chunks = meta["num_chunks"]
+    chunk_size = meta["size"]
+    last_chunk_len = meta["chunk_len"]
+    num_chunks = meta["nr_chunks"]
 
     # --- Concatenate body chunks ---
     body_bytes = bytearray()

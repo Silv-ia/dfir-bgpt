@@ -1,3 +1,5 @@
+## adjust folders, mode.
+
 # Configuration for generative modelling and classification
 TRAIN_FOLDERS = [
                 "content/dfir-bgpt/training"
@@ -11,7 +13,7 @@ EVAL_SPLIT = 0.01                                                # Split of eval
 
 # Configuration for the paths
 PRETRAINED_PATH = "weights-image.pth"                            # Path to pre-trained weights
-WEIGHTS_PATH = "weights-train.pth"                        # Path to save weights
+WEIGHTS_PATH = "weights-train1.pth"                        # Path to save weights
 LOGS_PATH = "logs-bgpt.txt"                              # Path to save logs
 
 # Configuration for the model
@@ -27,9 +29,10 @@ LEARNING_RATE = 1e-5                                            # Learning rate 
 BATCH_SIZE = 8                                                  # Batch size for training
 ACCUMULATION_STEPS = 1                                          # Accumulation steps to simulate large batch size
 PATCH_SAMPLING_BATCH_SIZE = 0                                   # Batch size for patch during training, 0 for full batch
-LOAD_FROM_CHECKPOINT = True                                    # Whether to load weights from a checkpoint
-LOAD_FROM_PRETRAINED = False                                     # Whether to load pre-trained weights from a checkpoint
-CONVERSION_MODE = None                                          # Mode of conversion None for autoregressive training, 'input->output' for unidirectional conversion, 'input&output' for bidirectional conversion)
+LOAD_FROM_CHECKPOINT = False                                    # Whether to load weights from a checkpoint
+LOAD_FROM_PRETRAINED = True                                     # Whether to load pre-trained weights from a checkpoint
+## input target
+CONVERSION_MODE = 'input->output'                                          # Mode of conversion None for autoregressive training, 'input->output' for unidirectional conversion, 'input&output' for bidirectional conversion)
 WANDB_LOG = True                                                # Whether to log to wandb
 SHOW_WARNS = False                                              # Whether to show warnings
 DETERMINISTIC = True                                           # Whether to set random seed for reproducibility

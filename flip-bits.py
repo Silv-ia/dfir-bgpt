@@ -21,7 +21,7 @@ def corrupt_chunk(chunk_path: Path, bits=CORRUPTION_PERCENT):
     print("Running:", " ".join(cmd))
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
-        print(f"❌ Bitflip failed on {chunk_path}")
+        print(f"Bitflip failed on {chunk_path}")
         print("stderr:", result.stderr.strip())
         raise subprocess.CalledProcessError(result.returncode, cmd, result.stdout, result.stderr)
 
