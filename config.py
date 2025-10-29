@@ -2,11 +2,11 @@
 
 # Configuration for generative modelling and classification
 TRAIN_FOLDERS = [
-                "content/dfir-bgpt/training"
+                "training"
                 # "cpu_states/train",
                  ]     # Folder containing training data
 EVAL_FOLDERS = [
-                "content/dfir-bgpt/test"
+                "test"
                 # "cpu_states/test",
                 ]                                               # Folder containing evaluation data
 EVAL_SPLIT = 0.01                                                # Split of evaluation data
