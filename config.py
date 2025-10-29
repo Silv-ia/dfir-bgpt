@@ -18,7 +18,7 @@ LOGS_PATH = "logs-bgpt.txt"                              # Path to save logs
 
 # Configuration for the model
 PATCH_SIZE = 16                                                 # Patch Size
-PATCH_LENGTH = 1024                                             # Patch Length
+PATCH_LENGTH = 512                                             # Patch Length
 BYTE_NUM_LAYERS = 3                                             # Number of layers in the decoder
 PATCH_NUM_LAYERS = 12                                           # Number of layers in the encoder
 HIDDEN_SIZE = 768                                               # Hidden Size
@@ -26,7 +26,7 @@ HIDDEN_SIZE = 768                                               # Hidden Size
 # Configuration for the training
 NUM_EPOCHS = 32                                                 # Number of epochs to train for (if early stopping doesn't intervene)
 LEARNING_RATE = 1e-5                                            # Learning rate for the optimizer
-BATCH_SIZE = 8                                                  # Batch size for training
+BATCH_SIZE = 2                                                  # Batch size for training
 ACCUMULATION_STEPS = 1                                          # Accumulation steps to simulate large batch size
 PATCH_SAMPLING_BATCH_SIZE = 0                                   # Batch size for patch during training, 0 for full batch
 LOAD_FROM_CHECKPOINT = False                                    # Whether to load weights from a checkpoint

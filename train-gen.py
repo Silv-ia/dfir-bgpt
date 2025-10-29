@@ -179,7 +179,10 @@ class ByteDataset(Dataset):
             file_masks = input_masks[:-1] + target_masks
 
             if len(file_bytes) > PATCH_LENGTH*PATCH_SIZE:
-                print(f"Warning: {input_filename} and {target_filename} are too long after concatenation, truncating to {PATCH_LENGTH*PATCH_SIZE} bytes.")
+                # all 48 bytes truncation, let it be for now! train loss is decreasing so let it run.
+                # print(f"Warning: {input_filename} and {target_filename} are too long after concatenation, truncating to {PATCH_LENGTH*PATCH_SIZE} bytes.")
+                truncated = len(file_bytes) - (PATCH_LENGTH * PATCH_SIZE)
+                # print(f"Warning: {input_filename} and {target_filename} are too long by {truncated} bytes, truncating.")
                 file_bytes = file_bytes[:PATCH_LENGTH*PATCH_SIZE]
                 file_masks = file_masks[:PATCH_LENGTH]
 
@@ -309,12 +312,12 @@ if __name__ == "__main__":
         if torch.cuda.device_count() > 1:
             # If you have a DataParallel model, you need to load to model.module instead
             cpu_model = deepcopy(model.module)
-            cpu_model.load_state_dict(checkpoint['model'])
+            cpu_model.load_state_dict(checkpoint['model'], strict=False)
             model.module.load_state_dict(cpu_model.state_dict())
         else:
             # Load to a CPU clone of the model, then load back
             cpu_model = deepcopy(model)
-            cpu_model.load_state_dict(checkpoint['model'])
+            cpu_model.load_state_dict(checkpoint['model'], strict=False)
             model.load_state_dict(cpu_model.state_dict())
             
         print(f"Successfully Loaded Pretrained Checkpoint at Epoch {checkpoint['epoch']} with Loss {checkpoint['min_eval_loss']}")
