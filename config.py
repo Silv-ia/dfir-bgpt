@@ -21,7 +21,7 @@ PATCH_SIZE = 16                                                 # Patch Size
 PATCH_LENGTH = 512                                             # Patch Length
 BYTE_NUM_LAYERS = 3                                             # Number of layers in the decoder
 PATCH_NUM_LAYERS = 12                                           # Number of layers in the encoder
-HIDDEN_SIZE = 768                                               # Hidden Size
+HIDDEN_SIZE = 384                                               # Hidden Size
 
 # Configuration for the training
 NUM_EPOCHS = 32                                                 # Number of epochs to train for (if early stopping doesn't intervene)
