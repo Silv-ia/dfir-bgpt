@@ -2,11 +2,11 @@
 
 # Configuration for generative modelling and classification
 TRAIN_FOLDERS = [
-                "training"
+                "test"
                 # "cpu_states/train",
                  ]     # Folder containing training data
 EVAL_FOLDERS = [
-                "test"
+                # "test"
                 # "cpu_states/test",
                 ]                                               # Folder containing evaluation data
 EVAL_SPLIT = 0.01                                                # Split of evaluation data
@@ -14,7 +14,7 @@ EVAL_SPLIT = 0.01                                                # Split of eval
 # Configuration for the paths
 PRETRAINED_PATH = "weights-image.pth"                            # Path to pre-trained weights
 WEIGHTS_PATH = "weights-train1.pth"                        # Path to save weights
-LOGS_PATH = "logs-bgpt.txt"                              # Path to save logs
+LOGS_PATH = "logs-bgpt1.txt"                              # Path to save logs
 
 # Configuration for the model
 PATCH_SIZE = 16                                                 # Patch Size
@@ -24,7 +24,7 @@ PATCH_NUM_LAYERS = 12                                           # Number of laye
 HIDDEN_SIZE = 384                                               # Hidden Size
 
 # Configuration for the training
-NUM_EPOCHS = 32                                                 # Number of epochs to train for (if early stopping doesn't intervene)
+NUM_EPOCHS = 2                                                 # Number of epochs to train for (if early stopping doesn't intervene)
 LEARNING_RATE = 1e-5                                            # Learning rate for the optimizer
 BATCH_SIZE = 2                                                  # Batch size for training
 ACCUMULATION_STEPS = 1                                          # Accumulation steps to simulate large batch size
