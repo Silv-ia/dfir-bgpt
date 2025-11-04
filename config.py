@@ -12,16 +12,16 @@ EVAL_FOLDERS = [
 EVAL_SPLIT = 0.01                                                # Split of evaluation data
 
 # Configuration for the paths
-PRETRAINED_PATH = "weights-image.pth"                            # Path to pre-trained weights
-WEIGHTS_PATH = "weights-train1.pth"                        # Path to save weights
-LOGS_PATH = "logs-bgpt1.txt"                              # Path to save logs
+PRETRAINED_PATH = "weights-train1.pth"                            # Path to pre-trained weights
+WEIGHTS_PATH = "weights-train2.pth"                        # Path to save weights
+LOGS_PATH = "logs-bgpt2.txt"                              # Path to save logs
 
 # Configuration for the model
 PATCH_SIZE = 16                                                 # Patch Size
 PATCH_LENGTH = 512                                             # Patch Length
 BYTE_NUM_LAYERS = 3                                             # Number of layers in the decoder
 PATCH_NUM_LAYERS = 12                                           # Number of layers in the encoder
-HIDDEN_SIZE = 384                                               # Hidden Size
+HIDDEN_SIZE = 384                                             # Hidden Size
 
 # Configuration for the training
 NUM_EPOCHS = 2                                                 # Number of epochs to train for (if early stopping doesn't intervene)
@@ -29,8 +29,8 @@ LEARNING_RATE = 1e-5                                            # Learning rate 
 BATCH_SIZE = 2                                                  # Batch size for training
 ACCUMULATION_STEPS = 1                                          # Accumulation steps to simulate large batch size
 PATCH_SAMPLING_BATCH_SIZE = 0                                   # Batch size for patch during training, 0 for full batch
-LOAD_FROM_CHECKPOINT = False                                    # Whether to load weights from a checkpoint
-LOAD_FROM_PRETRAINED = True                                     # Whether to load pre-trained weights from a checkpoint
+LOAD_FROM_CHECKPOINT = True                                    # Whether to load weights from a checkpoint
+LOAD_FROM_PRETRAINED = False                                     # Whether to load pre-trained weights from a checkpoint
 ## input target
 CONVERSION_MODE = 'input->output'                                          # Mode of conversion None for autoregressive training, 'input->output' for unidirectional conversion, 'input&output' for bidirectional conversion)
 WANDB_LOG = True                                                # Whether to log to wandb
