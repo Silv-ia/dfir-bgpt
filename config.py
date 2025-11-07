@@ -9,12 +9,12 @@ EVAL_FOLDERS = [
                 # "test"
                 # "cpu_states/test",
                 ]                                               # Folder containing evaluation data
-EVAL_SPLIT = 0.01                                                # Split of evaluation data
+EVAL_SPLIT = 0.05                                                # Split of evaluation data
 
 # Configuration for the paths
-PRETRAINED_PATH = "weights-train1.pth"                            # Path to pre-trained weights
-WEIGHTS_PATH = "weights-train2.pth"                        # Path to save weights
-LOGS_PATH = "logs-bgpt2.txt"                              # Path to save logs
+PRETRAINED_PATH = "weights-train4.pth"                            # Path to pre-trained weights
+WEIGHTS_PATH = "weights-train5.pth"                        # Path to save weights
+LOGS_PATH = "logs-bgpt5.txt"                              # Path to save logs
 
 # Configuration for the model
 PATCH_SIZE = 16                                                 # Patch Size
