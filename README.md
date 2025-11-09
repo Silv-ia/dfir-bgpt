@@ -1,4 +1,10 @@
-# Beyond Language Models: Byte Models are Digital World Simulators
+# Fork: Beyond Language Models: Byte Models are Digital World Simulators
+
+### edit
+config.py is edited for training and inference. 
+create-dataset.py takes a folder of images and chunks them. 
+flip-bits-final.py takes a folder of chunked images and uses the bitflip tool (https://github.com/aybabtme/bitflip) to corrupt the chunks with specified percentages. The output is a single folder containing .input and .output files for each chunk. 
+reconstruct.py reconstructs images chunked by create-dataset.py.
 
 This repository contains the code for the bGPT model as described in the paper [Beyond Language Models: Byte Models are Digital World Simulators](https://arxiv.org/abs/2402.19155).
 
