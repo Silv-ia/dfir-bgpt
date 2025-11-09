@@ -38,13 +38,13 @@ SHOW_WARNS = False                                              # Whether to sho
 DETERMINISTIC = True                                           # Whether to set random seed for reproducibility
 
 # Configuration for inference
-INFERENCE_WEIGHTS_PATH = "weights-conversion.pth"               # Path to weights for inference
-INPUT_EXT = "abc"                                               # Extension of input files, used for conversion
-TARGET_EXT = "mid"                                              # Extension of target files
-INPUT_FOLDER = "input"                                          # Folder containing input files
-OUTPUT_FOLDER = "output"                                        # Folder to save output files
-INFERENCE_MODE = "convert"                                      # Mode of inference (convert or generate)
-NUM_SAMPLES = 100                                               # Number of samples to generate (only for generate mode)
+INFERENCE_WEIGHTS_PATH = "weights-train5.pth"               # Path to weights for inference
+INPUT_EXT = "bin"                                               # Extension of input files, used for conversion
+TARGET_EXT = "bin"                                              # Extension of target files
+INPUT_FOLDER = "body-image-0001"                                          # Folder containing input files
+OUTPUT_FOLDER = "repaired"                                        # Folder to save output files
+INFERENCE_MODE = "generate"                                      # Mode of inference (convert or generate)
+NUM_SAMPLES = 5                                               # Number of samples to generate (only for generate mode)
 TOP_K = 0                                                       # Top k for sampling
 TOP_P = 1.                                                      # Top p for sampling
 TEMPERATURE = 1                                                 # Temperature for sampling
