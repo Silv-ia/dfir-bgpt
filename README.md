@@ -1,6 +1,6 @@
-# Fork: Beyond Language Models: Byte Models are Digital World Simulators
+## bGPT to repair corrupted JPEG files
+This is a project within the digital forensics, EP2780, course at KTH. 
 
-### edit
 config.py is edited for training and inference. 
 
 create-dataset.py takes a folder of images and chunks them. 
@@ -10,6 +10,8 @@ flip-bits-final.py takes a folder of chunked images and uses the bitflip tool (h
 reconstruct.py reconstructs images chunked by create-dataset.py.
 
 ---
+
+# Beyond Language Models: Byte Models are Digital World Simulators
 
 This repository contains the code for the bGPT model as described in the paper [Beyond Language Models: Byte Models are Digital World Simulators](https://arxiv.org/abs/2402.19155).
 
